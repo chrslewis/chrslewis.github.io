@@ -1,0 +1,88 @@
+a.left
+{
+    position: relative;
+}
+
+a.left:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.left:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+@media only screen and (min-width: 718px) {
+
+  .top {
+    display: block;
+    margin: 64px 64px 32px 64px;
+    transition: margin .125s linear;
+    -o-transition: margin .125s linear;
+    -moz-transition: margin .125s linear;
+    -webkit-transition: margin .125s linear;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: "labil grotesk trial";
+    font-feature-settings: "ss01";
+    font-size: 112px;
+    transition: font-size .125s linear;
+    -o-transition: font-size .125s linear;
+    -moz-transition: font-size .125s linear;
+    -webkit-transition: font-size .125s linear;
+  }
+
+  .container {
+    display: block;
+    margin: 0 64px;
+    max-width: 1060px;
+    transition: margin .125s linear;
+    -o-transition: margin .125s linear;
+    -moz-transition: margin .125s linear;
+    -webkit-transition: margin .125s linear;
+  }
+}
+
+@media only screen and (max-width: 717px) {
+
+  .top {
+    margin: 32px 32px 24px 32px;
+    display: block;
+    transition: margin .125s linear;
+    -o-transition: margin .125s linear;
+    -moz-transition: margin .125s linear;
+    -webkit-transition: margin .125s linear;
+  }
+
+  h1 {
+    display: block;
+    margin: 0;
+    font-family: "labil grotesk trial";
+    font-feature-settings: "ss01";
+    font-size: 56px;
+    line-height: 1.2;
+    transition: font-size .125s linear;
+    -o-transition: font-size .125s linear;
+    -moz-transition: font-size .125s linear;
+    -webkit-transition: font-size .125s linear;
+  }
+
+  .container {
+    margin: 0 32px;
+    max-width: 100%;
+    transition: margin .125s linear;
+    -o-transition: margin .125s linear;
+    -moz-transition: margin .125s linear;
+    -webkit-transition: margin .125s linear;
+  }
+}
