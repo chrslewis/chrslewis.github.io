@@ -9,11 +9,11 @@ h1 {
   margin: 0;
 }
 
-a.link {
+a:link {
   text-decoration: none;
 }
 
-a.hover {
+a:hover {
   text-decoration: underline;
 }
 
