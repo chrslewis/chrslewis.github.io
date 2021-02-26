@@ -3,6 +3,14 @@
   src: url(LabilGrotesk-Bold.woff);
 }
 
+html,body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-smooth: always;
+}
+
 h1 {
   font-family: "LabilGrotesk-Bold";
   font-feature-settings: "ss01";
