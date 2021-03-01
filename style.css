@@ -18,8 +18,10 @@ h1 {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #0000FF;
   border: none;
+  border-radius: 8px;
+  margin-top: 32px;
   color: white;
   padding: 24px;
   text-align: center;
