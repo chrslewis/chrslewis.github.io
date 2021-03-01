@@ -17,21 +17,8 @@ h1 {
   margin: 0;
 }
 
-button {
-  cursor: pointer;
-  background-color: #0000FF;
-  border: none;
-  border-radius: 8px;
-  margin-top: 72px;
-  color: white;
-  padding: 24px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 24px;
-  font-family: "LabilGrotesk-Bold";
-  font-feature-settings: "ss01";
-  text-transform: uppercase;
+button:hover {
+  background-color: #0000C7;
 }
 
 a:link {
@@ -40,6 +27,10 @@ a:link {
 
 a:hover {
   text-decoration: underline;
+}
+
+a:visited {
+  color: #0000FF;
 }
 
 @media only screen and (min-width: 718px) {
@@ -71,6 +62,24 @@ a:hover {
     -moz-transition: margin .125s linear;
     -webkit-transition: margin .125s linear;
   }
+
+  button {
+    cursor: pointer;
+    transition-duration: 0.4s;
+    background-color: #0000FF;
+    border: none;
+    border-radius: 50px;
+    margin: 72px 0 72px 0;
+    color: white;
+    padding: 24px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    font-family: "LabilGrotesk-Bold";
+    font-feature-settings: "ss01";
+    text-transform: uppercase;
+  }
 }
 
 @media only screen and (max-width: 717px) {
@@ -101,5 +110,24 @@ a:hover {
     -o-transition: margin .125s linear;
     -moz-transition: margin .125s linear;
     -webkit-transition: margin .125s linear;
+  }
+
+    button {
+      cursor: pointer;
+      transition-duration: 0.4s;
+      background-color: #0000FF;
+      border: none;
+      border-radius: 50px;
+      margin: 48px 0 48px 0;
+      color: white;
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      font-size: 18px;
+      font-family: "LabilGrotesk-Bold";
+      font-feature-settings: "ss01";
+      text-transform: uppercase;
+    }
   }
 }
