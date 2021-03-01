@@ -17,12 +17,9 @@ h1 {
   margin: 0;
 }
 
-button:hover {
-  background-color: #0000C7;
-}
-
 a:link {
   text-decoration: none;
+  color: #0000FF;
 }
 
 a:hover {
@@ -32,6 +29,10 @@ a:hover {
 
 a:visited {
   color: #0000FF;
+}
+
+button:hover {
+  background-color: #0000C7;
 }
 
 @media only screen and (min-width: 718px) {
