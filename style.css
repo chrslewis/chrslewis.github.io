@@ -11,9 +11,8 @@ html,body {
   font-smooth: always;
 }
 
-* {
+body {
   margin: 0;
-  padding: 0;
 }
 
 h1 {
