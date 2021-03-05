@@ -11,6 +11,11 @@ html,body {
   font-smooth: always;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: "LabilGrotesk-Bold";
   font-feature-settings: "ss01";
