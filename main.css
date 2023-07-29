@@ -117,8 +117,8 @@
   .spin:active{
     animation-name: spin;
     animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  
 }
 
 .trail {
