@@ -7,7 +7,7 @@
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    filter: invert(18%) sepia(99%) saturate(3792%) hue-rotate(109deg) brightness(96%) contrast(103%);
+    filter: filter: brightness(0) saturate(100%) invert(16%) sepia(41%) saturate(5807%) hue-rotate(287deg) brightness(87%) contrast(120%);;
   }
   
   .trail {
