@@ -90,8 +90,6 @@
     margin: 0;
     font-family: sans-serif;
     height: 100%;
-    -webkit-user-select: none;
-    user-select: none;
   }
 
   img {
@@ -106,8 +104,6 @@
     object-fit: cover;
   }
   
-  
-
   .spin {
     cursor: pointer;
     width: 210px;
@@ -165,15 +161,14 @@
   #smiley {
     width: 140px;
     height: 140px;
+    -webkit-user-select: none;
+    user-select: none;
+    filter: invert(18%) sepia(99%) saturate(3792%) hue-rotate(109deg) brightness(96%) contrast(103%);
   }
 
   .content{
     width: 300px;
     height: 300px;
   }
-}
-
-#smiley {
-    filter: invert(18%) sepia(99%) saturate(3792%) hue-rotate(109deg) brightness(96%) contrast(103%);
 }
 
