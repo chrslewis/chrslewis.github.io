@@ -120,6 +120,10 @@
     animation-timing-function: ease-in-out; 
 }
 
+#smiley {
+  filter: invert(18%) sepia(99%) saturate(3792%) hue-rotate(109deg) brightness(96%) contrast(103%);
+}
+
 .trail {
   position: absolute;
   height: 24px; width: 24px;
@@ -163,7 +167,7 @@
     height: 140px;
     -webkit-user-select: none;
     user-select: none;
-    filter: invert(18%) sepia(99%) saturate(3792%) hue-rotate(109deg) brightness(96%) contrast(103%);
+    
   }
 
   .content{
@@ -171,4 +175,5 @@
     height: 300px;
   }
 }
+
 
