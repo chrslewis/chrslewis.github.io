@@ -121,6 +121,10 @@
 }
 
 #smiley {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
 
@@ -165,8 +169,6 @@
   #smiley {
     width: 140px;
     height: 140px;
-    -webkit-user-select: none;
-    user-select: none;
   }
 
   .content{
