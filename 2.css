@@ -90,6 +90,7 @@
     margin: 0;
     font-family: sans-serif;
     height: 100%;
+    -webkit-touch-callout: none;
   }
 
   img {
