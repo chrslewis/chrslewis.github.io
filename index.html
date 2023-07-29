@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="stylesheet" type="text/css" href="main.css">
+  <link id="secondStyleSheet" rel="stylesheet" type="text/css" href="1.css">
 </head>
 <body>
    
@@ -15,7 +16,7 @@
 
     <div class="content-wrap">
         <div class="content">
-          <div id="changeStyleBtn" onmouseover="cycleStyleSheet()" onclick="cycleStyleSheet()"class="spin">
+          <div id="changeStyleBtn" onclick="cycleSecondStyleSheet()" onclick="cycleSecondStyleSheet()" class="spin">
             <img id="smiley"
             src="hooman.svg" 
             draggable="false" 
@@ -103,9 +104,8 @@ function animate() {
 animate();
 
 
-let currentStyleSheetIndex = 0;
-    const styleSheets = [
-        "main.css",
+let currentSecondStyleSheetIndex = 0;
+    const secondStyleSheets = [
         "1.css",
         "2.css",
         "3.css",
@@ -113,12 +113,12 @@ let currentStyleSheetIndex = 0;
         // Add more stylesheets if needed
     ];
 
-    function cycleStyleSheet() {
-        const existingStyleSheet = document.querySelector("link[rel='stylesheet']");
+    function cycleSecondStyleSheet() {
+        const existingSecondStyleSheet = document.querySelector("#secondStyleSheet");
 
-        if (existingStyleSheet) {
-            currentStyleSheetIndex = (currentStyleSheetIndex + 1) % styleSheets.length;
-            existingStyleSheet.href = styleSheets[currentStyleSheetIndex];
+        if (existingSecondStyleSheet) {
+            currentSecondStyleSheetIndex = (currentSecondStyleSheetIndex + 1) % secondStyleSheets.length;
+            existingSecondStyleSheet.href = secondStyleSheets[currentSecondStyleSheetIndex];
         }
     }
 
