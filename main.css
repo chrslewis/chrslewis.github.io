@@ -21,13 +21,6 @@
     cursor: pointer;
     display: block;
 
-    &:hover {
-      background-color:var(--main-color);
-      transition: 0.2s;
-      color: white;
-      border: 2px solid var(--main-color);
-    }
-
     &:active {
       transition: 0.2s;
       color: white;
@@ -135,6 +128,9 @@
 
 @media (hover:hover) {
   .outline:hover {
+    background-color:var(--main-color);
+    transition: 0.2s;
+    color: white;
     border: 2px solid var(--main-color);
   }
 }
