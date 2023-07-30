@@ -3,18 +3,10 @@
 }
 
 #smiley {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
   filter: invert(18%) sepia(99%) saturate(3792%) hue-rotate(109deg) brightness(96%) contrast(103%);
 }
 
 .trail {
-  position: absolute;
-  height: 24px; width: 24px;
-  border-radius: 24px;
   background-color: black;
-  z-index: 12;
 }
 

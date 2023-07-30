@@ -15,15 +15,9 @@
     </div>
 
     <div class="content-wrap">
-        <div class="content">
-          <div id="changeStyleBtn" onmouseover="cycleSecondStyleSheet()" onclick="cycleSecondStyleSheet()" class="spin">
-            <img id="smiley"
-            src="hooman.svg" 
-            draggable="false" 
-            style="user-select: none;" 
-            onmousedown="return false"
-            alt="smiley face surrounded by mouse cursors"
-            />
+        <div class="container">
+          <div id="content" onmouseover="cycleSecondStyleSheet()" onclick="cycleSecondStyleSheet()">
+            <img id="smiley" src="hooman.svg" draggable="false" style="user-select: none;" onmousedown="return false"alt="smiley face surrounded by mouse cursors"/>
           </div>
           <video class="bg-loop" autoplay loop muted playsinline>
             <source src="boxes.webm" type="video/webm"/>
@@ -44,83 +38,94 @@
         </div>
     </div>
 
-    <script>
-
-var dots = [],
-    mouse = {
-      x: 0,
-      y: 0
-    };
-
-var Dot = function() {
-  this.x = 0;
-  this.y = 0;
-  this.node = (function(){
-    var n = document.createElement("div");
-    n.className = "trail";
-    document.body.appendChild(n);
-    return n;
-  }());
-};
-
-Dot.prototype.draw = function() {
-  this.node.style.left = this.x + "px";
-  this.node.style.top = this.y + "px";
-};
-
-for (var i = 0; i < 12; i++) {
-  var d = new Dot();
-  dots.push(d);
-}
-
-function draw() {
- 
-  var x = mouse.x,
-      y = mouse.y;
+<script>
   
-  dots.forEach(function(dot, index, dots) {
-    var nextDot = dots[index + 1] || dots[0];
+  //Cursor Trail//
+  var dots = [],
+      mouse = {
+        x: 0,
+        y: 0
+      };
+
+  var Dot = function() {
+    this.x = 0;
+    this.y = 0;
+    this.node = (function(){
+      var n = document.createElement("div");
+      n.className = "trail";
+      document.body.appendChild(n);
+      return n;
+    }());
+  };
+
+  Dot.prototype.draw = function() {
+    this.node.style.left = this.x + "px";
+    this.node.style.top = this.y + "px";
+  };
+
+  for (var i = 0; i < 12; i++) {
+    var d = new Dot();
+    dots.push(d);
+  }
+
+  function draw() {
+  
+    var x = mouse.x,
+        y = mouse.y;
     
-    dot.x = x;
-    dot.y = y;
-    dot.draw();
-    x += (nextDot.x - dot.x) * .6;
-    y += (nextDot.y - dot.y) * .6;
+    dots.forEach(function(dot, index, dots) {
+      var nextDot = dots[index + 1] || dots[0];
+      
+      dot.x = x;
+      dot.y = y;
+      dot.draw();
+      x += (nextDot.x - dot.x) * .6;
+      y += (nextDot.y - dot.y) * .6;
 
+    });
+  }
+
+  addEventListener("mousemove", function(event) {
+    mouse.x = event.pageX;
+    mouse.y = event.pageY;
   });
-}
-
-addEventListener("mousemove", function(event) {
-  mouse.x = event.pageX;
-  mouse.y = event.pageY;
-});
 
 
-function animate() {
-  draw();
-  requestAnimationFrame(animate);
-}
+  function animate() {
+    draw();
+    requestAnimationFrame(animate);
+  }
 
-animate();
+  animate();
+
+  //spin//
+  var content = document.getElementById("content");
+  var smiley = document.getElementById("smiley");
+  var rot = 360;
+  btn.addEventListener("click", function() {
+    content.style = 'transform: rotate(' + rot + 'deg)';
+    rot += 360;
+  });
 
 
-let currentSecondStyleSheetIndex = 0;
-    const secondStyleSheets = [
-        "4.css",
-        "5.css",
-        "1.css",
-        "2.css",
-        "3.css",
-    ];
+  //color change//
+  let currentSecondStyleSheetIndex = 0;
+      const secondStyleSheets = [
+          "4.css",
+          "5.css",
+          "1.css",
+          "2.css",
+          "3.css",
+      ];
 
-    function cycleSecondStyleSheet() {
-        const existingSecondStyleSheet = document.querySelector("#secondStyleSheet");
+      function cycleSecondStyleSheet() {
+          const existingSecondStyleSheet = document.querySelector("#secondStyleSheet");
 
-        if (existingSecondStyleSheet) {
-            currentSecondStyleSheetIndex = (currentSecondStyleSheetIndex + 1) % secondStyleSheets.length;
-            existingSecondStyleSheet.href = secondStyleSheets[currentSecondStyleSheetIndex];
-        }
-    }
+          if (existingSecondStyleSheet) {
+              currentSecondStyleSheetIndex = (currentSecondStyleSheetIndex + 1) % secondStyleSheets.length;
+              existingSecondStyleSheet.href = secondStyleSheets[currentSecondStyleSheetIndex];
+          }
+      }
 
 </script>
     
