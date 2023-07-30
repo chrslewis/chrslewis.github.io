@@ -134,7 +134,7 @@
   }
 
 @media (hover:hover) {
-  button:hover {
+  .outline:hover {
     border: 2px solid var(--main-color);
   }
 }
