@@ -2,13 +2,6 @@
     --main-color: black;
   }
   
-  #smiley {
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-  }
-  
   .trail {
     position: absolute;
     height: 24px; width: 24px;

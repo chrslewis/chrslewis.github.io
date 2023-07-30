@@ -62,7 +62,7 @@ video{
   align-items: center;
 }
 
-.content{
+.content {
   width: 500px;
   height: 500px;
   display: flex;
@@ -70,13 +70,21 @@ video{
   align-items: center;
 }
 
-#spin {
+.image-container {
   cursor: pointer;
   width: 210px;
   height: 210px;
   position: absolute;
   z-index: 10;
   display: block;
+}
+
+.rotating-image {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  transition: transform 1s;
 }
 
 .ticker-wrap {

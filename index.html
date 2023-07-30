@@ -16,8 +16,8 @@
 
     <div class="content-wrap">
         <div class="content">
-          <div id="spin" onmouseover="cycleSecondStyleSheet()" onclick="cycleSecondStyleSheet()">
-            <img id="smiley" src="hooman.svg" draggable="false" onmousedown="return false" alt="smiley face surrounded by mouse cursors"/>
+          <div class="image-container" onclick="rotateImage();cycleSecondStyleSheet()" onmouseover="cycleSecondStyleSheet()">
+            <img class="rotating-image" src="hooman.svg" draggable="false" onmousedown="return false" alt="smiley face surrounded by mouse cursors"/>
           </div>
           <video class="bg-loop" autoplay loop muted playsinline>
             <source src="boxes.webm" type="video/webm"/>
@@ -40,11 +40,18 @@
 
 <script>
 
-var spin = document.getElementById("spin");
-var smiley = document.getElementById("smiley");
-btn.addEventListener("click", function() {
-  content.style = 'transform: rotate(' + 0 + '360deg)';
-});
+let currentRotation = 0;
+
+function rotateImage() {
+  // Get the image element
+  const rotatingImage = document.querySelector('.rotating-image');
+
+  // Calculate the new rotation angle
+  currentRotation += 360;
+
+  // Apply the rotation
+  rotatingImage.style.transform = `rotate(${currentRotation}deg)`;
+};
 
 var dots = [],
     mouse = {
@@ -120,7 +127,7 @@ let currentSecondStyleSheetIndex = 0;
             currentSecondStyleSheetIndex = (currentSecondStyleSheetIndex + 1) % secondStyleSheets.length;
             existingSecondStyleSheet.href = secondStyleSheets[currentSecondStyleSheetIndex];
         }
-    }
+    };
 
 </script>  
 </body>

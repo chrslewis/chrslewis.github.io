@@ -2,11 +2,7 @@
   --main-color: blue;
 }
 
-#smiley {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+.rotating-image {
   filter: invert(7%) sepia(100%) saturate(7443%) hue-rotate(247deg) brightness(110%) contrast(135%);
 }
 
