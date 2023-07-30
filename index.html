@@ -16,7 +16,7 @@
 
     <div class="content-wrap">
         <div class="content">
-          <div class="spin" onmouseover="cycleSecondStyleSheet()" onclick="cycleSecondStyleSheet()">
+          <div id="spin" onmouseover="cycleSecondStyleSheet()" onclick="cycleSecondStyleSheet()">
             <img id="smiley" src="hooman.svg" draggable="false" onmousedown="return false" alt="smiley face surrounded by mouse cursors"/>
           </div>
           <video class="bg-loop" autoplay loop muted playsinline>
@@ -38,7 +38,13 @@
         </div>
     </div>
 
-    <script>
+<script>
+
+var spin = document.getElementById("spin");
+var smiley = document.getElementById("smiley");
+btn.addEventListener("click", function() {
+  content.style = 'transform: rotate(' + 0 + '360deg)';
+});
 
 var dots = [],
     mouse = {
@@ -116,7 +122,6 @@ let currentSecondStyleSheetIndex = 0;
         }
     }
 
-</script>
-    
+</script>  
 </body>
 </html>
