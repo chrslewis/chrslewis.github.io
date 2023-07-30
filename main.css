@@ -17,13 +17,6 @@ video{
   object-fit: cover;
 }
 
-.trail {
-  position: absolute;
-  height: 24px; width: 24px;
-  border-radius: 24px;
-  z-index: 12;
-}
-
 .button-wrap {
     position: fixed;
     top: 0;
@@ -69,7 +62,7 @@ video{
   align-items: center;
 }
 
-.container {
+.content{
   width: 500px;
   height: 500px;
   display: flex;
@@ -77,7 +70,7 @@ video{
   align-items: center;
 }
 
-#content {
+.spin {
   cursor: pointer;
   width: 210px;
   height: 210px;
@@ -86,11 +79,20 @@ video{
   display: block;
 }
 
-#smiley {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+.spin:active {
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;  
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(2160deg);
+  }
 }
 
 .ticker-wrap {
