@@ -49,6 +49,22 @@
   align-items: center;
 }
 
+.spin {
+  cursor: pointer;
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  z-index: 10;
+  display: block;
+}
+
+.spin:active{
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;  
+}
+
 .ticker-wrap {
     max-width: 100%;
     overflow: hidden;
@@ -74,7 +90,6 @@
     padding-left: 16px;
     margin: 52px 0;
     color: var(--main-color);
-
   }
   
   @keyframes marquee {
@@ -105,22 +120,6 @@
     object-fit: cover;
   }
 
-  .spin {
-    cursor: pointer;
-    width: 210px;
-    height: 210px;
-    position: absolute;
-    z-index: 10;
-    display: block;
-  }
-
-  .spin:active{
-    animation-name: spin;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;  
-}
-
 @keyframes spin {
     from {
         transform:rotate(0deg);
@@ -133,6 +132,12 @@
 @media screen and (max-width: 700px) {
   .trail {display: none;}
   }
+
+@media (hover:hover) {
+  button:hover {
+    border: 2px solid var(--main-color);
+  }
+}
 
 @media screen and (max-width: 500px) {
   .outline {
