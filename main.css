@@ -5,6 +5,11 @@ body, html {
   -webkit-touch-callout: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 img {
   width: 100%;
   height: 100%;
