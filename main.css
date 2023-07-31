@@ -72,8 +72,8 @@ video{
 
 .image-container {
   cursor: pointer;
-  width: 210px;
-  height: 210px;
+  width: 300px;
+  height: 300px;
   position: absolute;
   z-index: 10;
   display: block;
@@ -145,17 +145,10 @@ video{
 
   }
 
-  .spin {
-    width: 140px;
-    height: 140px;
-  }
-
-  #smiley {
-    width: 140px;
-    height: 140px;
-    -webkit-user-select: none;
-    user-select: none;
-  }
+  .image-container {
+  width: 180x;
+  height: 180px;
+}
 
   .content{
     width: 300px;
