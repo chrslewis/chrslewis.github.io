@@ -2,8 +2,8 @@
   --main-color: green;
 }
 
-.rotating-image {
-  filter: invert(18%) sepia(99%) saturate(3792%) hue-rotate(109deg) brightness(96%) contrast(103%);
+.rotating-image path {
+  fill: green;
 }
 
 .trail {

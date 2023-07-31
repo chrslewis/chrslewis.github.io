@@ -2,8 +2,8 @@
     --main-color: purple;
 }
   
-.rotating-image {
-    filter: brightness(0) saturate(100%) invert(16%) sepia(41%) saturate(5807%) hue-rotate(287deg) brightness(87%) contrast(120%);
+.rotating-image path {
+    fill: purple;
   }
   
   .trail {
