@@ -82,6 +82,7 @@ video{
   position: absolute;
   z-index: 10;
   display: block;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .rotating-image {
