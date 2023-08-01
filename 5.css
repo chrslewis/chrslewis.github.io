@@ -1,15 +1,15 @@
 :root {
-    --main-color: purple;
+    --main-color: blue;
 }
   
 .rotating-image path {
-    fill: purple;
+    fill: blue;
   }
   
   .trail {
     position: absolute;
     height: 24px; width: 24px;
     border-radius: 24px;
-    background-color: red;
+    background-color: purple;
     z-index: 12;
   }
