@@ -1,9 +1,9 @@
 :root {
-    --main-color: purple;
+    --main-color: #9C00EE;
   }
   
   .rotating-image path {
-    fill: purple;
+    fill: #9C00EE;
   }
   
   .trail {
