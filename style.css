@@ -78,6 +78,7 @@ h6 {
   --spacing-l: 32px;
   --spacing-xl: 56px;
   --spacing-2xl: 96px;
+  --surface-primary: #FCFDFD;
   --text: #12121F;
   --text-subtle: #3c3c47;
   --text-subtler: #737384;
@@ -87,7 +88,7 @@ h6 {
 /* Layout */
 
 body {
-  background-color: aliceblue;
+  background-color: var(--surface-primary);
   font: var(--font-size)/1.5 var(--font-sans);
   font-weight: 300;
   margin: auto;
