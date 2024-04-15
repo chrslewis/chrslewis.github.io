@@ -87,14 +87,18 @@ h6 {
 
 /* Layout */
 
+.masthead {
+  margin-bottom: var(--spacing-xs);
+}
+
 body {
   background-color: var(--surface-primary);
   font: var(--font-size)/1.5 var(--font-sans);
   font-weight: 300;
   margin: auto;
   margin-top: var(--spacing-xl);
-  max-width: 640px;
-  padding: 1.5rem;
+  max-width: 688px;
+  padding: 24px;
 }
 
 h1, 
@@ -115,19 +119,24 @@ p {
 }
 
 a {
-color: var(--text);
+  color: var(--text);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 4px;
 
     &:hover {
-        color: blue;
-        text-decoration-color: blue;
-        transition: 0.2s ease-in;
+      color: blue;
+      text-decoration-color: blue;
+      transition: 0.2s ease-in;
     }
 }
 
 .ital {
   font-style: italic;
+}
+
+.main-title {
+  font: 80px /1 var(--font-serif);
+  margin: 48px 0;
 }
 
 .title {
@@ -140,12 +149,41 @@ color: var(--text);
   margin-bottom: var(--spacing-xs);
 }
 
-.label {
+.title-small {
+  font: 32px / 1 var(--font-serif);
+  font-weight: 300;
+  margin-bottom: var(--spacing-m);
+}
+
+.project-services {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+
+.service {
+  font: 16px / 1 var(--font-sans);
+  font-weight: 300;
   color: var(--text-subtler);
 }
 
+.project-intro {
+  color: var(--text);
+  font: 30px / 1.3 var(--font-serif);
+  margin: 80px 0;
+}
+
 .lead {
-  font-size: 32px;
+  font-family: var(--font-serif);
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: var(--spacing-l);
+}
+
+.label {
+  color: var(--text-subtler);
 }
 
 header {
@@ -164,6 +202,10 @@ header a {
 
 section {
   margin: var(--spacing-xl) 0;  
+}
+
+.paragraph {
+  margin: 80px 0;
 }
 
 article {
@@ -186,7 +228,7 @@ article {
   margin-bottom: 16px;  
 }
 
-/* Images */ 
+/* Media */ 
 
 .double {
   width: 100%;
@@ -197,27 +239,22 @@ article {
   margin: 24px 0;
 }
 
-.largeSquare {
+.single {
   width: 100%;
   margin: 24px 0;
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 0;
   display: block;
 }
 
-.smallSquare {
+.img-block {
   flex: 1;
   min-width: 0;
   box-sizing: border-box;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
 }
 
 /* Animations */
-
-svg {
-  margin-bottom: var(--spacing-xs);
-}
 
 #mainBox {
   animation: box-stretch 2s ease-in-out .3s infinite;
